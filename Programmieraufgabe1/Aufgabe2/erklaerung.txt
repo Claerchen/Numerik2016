@@ -1,0 +1,3 @@
+Die Auswertung mit dem Horner-Polynom ist stabiler, da weniger Rechenoperationen 
+durchgeführt werden müssen und es also weniger Zwischenergebnisse gibt, bei denen 
+durch die Rundung Fehler auftreten können.
