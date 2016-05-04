@@ -1,0 +1,9 @@
+Aufgabenteil a) liefert das schlechteste Ergebnis. Dies liegt daran, dass die 
+Addition für x1 ungefähr gleich -x2 schlecht konditioniert ist. Die Vorzeichen 
+bei a) alternieren, so dass dieser Fall auftritt.
+In Aufgabenteil b) wird dividiert. Die Division ist uneigeschränkt gut 
+koditioniert. Da die Vorzeichen immer positiv sind, tritt das Problem der 
+schlechten Konditionierung aus Aufgabenteil a) hier nicht auf.
+Aufgabntail c) liefert das genaueste Ergebnis. Bei der Potenzoperation wird der
+Fehler gedämpft.
+
