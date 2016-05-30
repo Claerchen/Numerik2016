@@ -1,33 +1,33 @@
 function [Integral] = myQuadraturSum1DTest
 
-#Trapezregel:
-for N=1:100;
+% anonyme Runge-Funktion
+f = @(x) 1./(1+25*x.^2);
+
+% Intervallgrenzen
 a=-1;
 b=1;
-f = @(x) 1./(1+25*x.^2);
+
+# exakter wert:
+wert = quad(f, -1, 1);
+
+#Trapezregel:
+for N=1:100;
 w=(b-a)/(2*N)*[1 1];
 p=[-1 1];
 
 Integral = myQuadraturSum1D (f,w,p,a,b,N);
 
-#exakte wert:
-wert = quad(f, -1, 1);
 #abweichung ausrechnen
 abweichung_trapez(N) = wert - Integral;
 end
 
 #simpson regel
 for N=1:100;
-a=-1;
-b=1;
-f = @(x) 1./(1+25*x.^2);
 w=(b-a)/(6*N)*[1 4 1];
 p=[-1 0 1];
 
 Integral = myQuadraturSum1D (f,w,p,a,b,N);
 
-#exakte wert:
-wert = quad(f, -1, 1);
 #abweichung ausrechnen
 abweichung_simpson(N) = wert - Integral;
 end
@@ -35,23 +35,14 @@ end
 
 #milne-regel
 for N=1:100;
-a=-1;
-b=1;
-f = @(x) 1./(1+25*x.^2);
 w=(b-a)/(90*N)*[7 32 12 32 7];
 p=[-1 0.5 0 0.5 1];
 
 Integral = myQuadraturSum1D (f,w,p,a,b,N);
 
-#exakte wert:
-wert = quad(f, -1, 1);
 #abweichung ausrechnen
 abweichung_milne(N) = wert - Integral;
 end
-Integral
-
-
-
 
 
 #plotten
