@@ -1,4 +1,4 @@
-function z = direct_forward_solve(LU,b)
+function z = forward_solve(LU,b)
 % L: linke untere Dreiecksmatrix, Die Funktion löst das Gleichungssystem Lz=b
 
 l=length(b); % Länge des Lösungsvektor bestimmen
