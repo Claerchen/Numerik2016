@@ -1,0 +1,5 @@
+Das Residuum gibt die Abweichung zum exakten Ergebnis an.
+Mit zunehmender Größe der Vandermondematrix wird der Fehler deutlich größer.
+Dies liegt daran, dass die Vandermondematrix bekanntermaßen sehr schlecht 
+konditioniert ist, da bei der Berechnung auf Grund der vielen Minuseinsen 
+und Einsen Auslöschung auftreten kann.
