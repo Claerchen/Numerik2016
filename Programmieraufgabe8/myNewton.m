@@ -1,6 +1,6 @@
 function [x, e, v] = myNewton (f, df, x0)
 
-n =100; # Anzahl der maximalen Iterationen
+n =50; # Anzahl der maximalen Iterationen
 a = 1:n; #Arrays generieren (a, e_speicher, v_speicher ist nur zur zwischenspeicherung)
 e_speicher = 1:n;
 a(1) = x0; #Startwert festlegen
